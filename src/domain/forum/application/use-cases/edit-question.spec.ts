@@ -1,14 +1,14 @@
 import { makeQuestion } from 'test/factories/make-question'
-import { InMemoryQuestionRepository } from 'test/repositories/in-memory-questions-repository'
+import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { EditQuestionUseCase } from './edit-question'
 
-let inMemoryQuestionRepository: InMemoryQuestionRepository
+let inMemoryQuestionRepository: InMemoryQuestionsRepository
 let sut: EditQuestionUseCase
 
 describe('Edit Question', () => {
   beforeEach(() => {
-    inMemoryQuestionRepository = new InMemoryQuestionRepository()
+    inMemoryQuestionRepository = new InMemoryQuestionsRepository()
     sut = new EditQuestionUseCase(inMemoryQuestionRepository)
   })
 
