@@ -41,6 +41,8 @@ describe('Edit Question', () => {
     const newQuestion = makeQuestion(
       {
         authorId: new UniqueEntityID('author-1'),
+        title: 'Title',
+        content: 'Content',
       },
       new UniqueEntityID('question-1')
     )
