@@ -1,7 +1,7 @@
-import type { QuestionRepository } from '@/domain/forum/application/repositories/question-repository'
+import type { QuestionsRepository } from '@/domain/forum/application/repositories/questions-repository'
 import type { Question } from '@/domain/forum/enterprise/entities/question'
 
-export class InMemoryQuestionRepository implements QuestionRepository {
+export class InMemoryQuestionRepository implements QuestionsRepository {
   public items: Question[] = []
 
   async findById(id: string): Promise<Question | null> {
