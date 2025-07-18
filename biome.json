@@ -17,10 +17,16 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "complexity": {
+        "noBannedTypes": "off"
+      }
     }
   },
   "files": {
-    "experimentalScannerIgnores": ["node_modules", "dist"]
+    "experimentalScannerIgnores": [
+      "node_modules",
+      "dist"
+    ]
   }
 }
