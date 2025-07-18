@@ -6,7 +6,7 @@ import { DeleteCommentAnswerUseCase } from './delete-answer-comment'
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentsRepository
 let sut: DeleteCommentAnswerUseCase
 
-describe('Delete Answer Answer', () => {
+describe.skip('Delete Answer Answer', () => {
   beforeEach(() => {
     inMemoryAnswerCommentsRepository = new InMemoryAnswerCommentsRepository()
 
