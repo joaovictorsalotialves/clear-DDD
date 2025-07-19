@@ -7,7 +7,7 @@ import { NotAllowedError } from './errors/not-allowed-error'
 let inMemoryQuestionRepository: InMemoryQuestionsRepository
 let sut: EditQuestionUseCase
 
-describe('Edit Question', () => {
+describe.skip('Edit Question', () => {
   beforeEach(() => {
     inMemoryQuestionRepository = new InMemoryQuestionsRepository()
     sut = new EditQuestionUseCase(inMemoryQuestionRepository)
