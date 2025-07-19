@@ -2,7 +2,6 @@ import { type Either, left, right } from '@/core/either'
 import { ResourceNotFoundError } from '@/domain/forum/application/use-cases/errors/resource-not-found-error'
 import type { Question } from '@/domain/forum/enterprise/entities/question'
 import type { QuestionsRepository } from '../repositories/questions-repository'
-import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
 
 interface GetQuestionBySlugUseCaseRequest {
   slug: string
@@ -11,7 +10,7 @@ interface GetQuestionBySlugUseCaseRequest {
 type GetQuestionBySlugUseCaseResponse = Either<
   ResourceNotFoundError,
   {
-    question: Question,
+    question: Question
   }
 >
 
