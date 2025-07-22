@@ -1,5 +1,5 @@
-/** biome-ignore-all lint/complexity/noStaticOnlyClass: <explanation> */
-/** biome-ignore-all lint/suspicious/noExplicitAny: <explanation> */
+/** biome-ignore-all lint/complexity/noStaticOnlyClass: ignore */
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignore */
 import type { AggregateRoot } from '../entities/aggregate-root'
 import type { UniqueEntityID } from '../entities/unique-entity-id'
 import type { DomainEvent } from './domain-event'

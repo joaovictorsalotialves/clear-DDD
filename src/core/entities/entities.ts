@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignore */
 import { UniqueEntityID } from './unique-entity-id'
 
 export abstract class Entity<Props> {
