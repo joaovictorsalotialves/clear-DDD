@@ -3,7 +3,6 @@ import type { EventHandler } from '@/core/events/event-handler'
 import { QuestionsRepository } from '@/domain/forum/application/repositories/questions-repository'
 import { AnswerCreatedEvent } from '@/domain/forum/enterprise/events/answer-created-event'
 import { SendNotificationUseCase } from '../use-cases/send-notification'
-import { aN } from 'vitest/dist/chunks/reporters.d.BFLkQcL6'
 
 export class OnAnswerCreated implements EventHandler {
   constructor(
@@ -21,13 +20,15 @@ export class OnAnswerCreated implements EventHandler {
   }
 
   private async sendNewAnswerNotification({ answer }: AnswerCreatedEvent) {
-    const question = await this.questionsRepository.findById(answer.questionId.toString())
+    const question = await this.questionsRepository.findById(
+      answer.questionId.toString()
+    )
 
     if (question) {
       await this.sendNotification.execute({
         recipientId: question?.authorId.toString(),
         title: `Nova responsta em ${question.title.substring(0, 40).concat('...')}`,
-        content: answer.excerpt
+        content: answer.excerpt,
       })
     }
   }

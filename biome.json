@@ -24,9 +24,6 @@
     }
   },
   "files": {
-    "experimentalScannerIgnores": [
-      "node_modules",
-      "dist"
-    ]
+    "experimentalScannerIgnores": ["node_modules", "dist"]
   }
 }
